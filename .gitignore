@@ -1,0 +1,29 @@
+# --- Executables and Objects ---
+obj/
+*.o
+*.d
+prod_ising
+pilot_ising
+pilot_ising.d
+prod_ising.d
+
+# --- Data and Results (Do NOT push to GitHub) ---
+results/
+data/
+*.bin
+*.dat
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# --- LaTeX Report & Files ---
+MOD_1_RELAZIONE*/
+main.pdf
+
+# --- Editor and OS ---
+.DS_Store
+.vscode/
+.idea/
