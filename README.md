@@ -164,6 +164,7 @@ python3 scripts/production/analysis/parse_final.py 64
 | $\beta/\nu$ | $0.12473 \pm 0.00336$ | $0.12500^a$ | $0.08\sigma$ | 3-param fit of $M(\beta_{pc}, L)$ |
 | $\eta$ | $0.2513 \pm 0.0130$ | $0.2500^a$ | $0.10\sigma$ | $\eta = 2 - \gamma/\nu$ |
 | $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.33\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
+| $\delta$ | $15.02 \pm 0.41$ | $15^a$ | $0.05\sigma$ | $\delta = 1 + (\gamma/\nu)/(\beta/\nu)$ |
 | $z$ | $2.18 \pm 0.08$ | $2.1667^b$ | $0.17\sigma$ | Dynamic scaling $\tau_{int} \sim L^z$ |
 | **Hyperscaling** | $1.9981 \pm 0.0147$ | $2.0000$ | $0.13\sigma$ | $2(\beta/\nu)+\gamma/\nu$, $d=2$ |
 

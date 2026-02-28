@@ -1363,12 +1363,21 @@ def extract_magnetic_exponents(data, L_list, beta_pc, beta_pc_err, nu, nu_err):
     eta = 2 - gamma_nu_measured
     eta_err = gamma_nu_err
 
+    # delta via Griffiths-Rushbrooke scaling relation
+    delta = 1.0 + gamma_nu_measured / beta_nu_measured
+    delta_err = np.sqrt(
+        (gamma_nu_err / beta_nu_measured)**2 +
+        (gamma_nu_measured * beta_nu_err / beta_nu_measured**2)**2
+    )
+
     hyperscaling = 2 * beta_nu_measured + gamma_nu_measured
     hyperscaling_err = np.sqrt((2 * beta_nu_err)**2 + gamma_nu_err**2)
 
     print_result("gamma = (gamma/nu)*nu", gamma, gamma_err)
     print_result("beta  = (beta/nu)*nu", beta, beta_err)
     print_result("eta   = 2 - gamma/nu", eta, eta_err)
+    print_result("delta = 1 + (g/nu)/(b/nu)", delta, delta_err)
+    print(f"    Expected: 15.0 (exact)  ->  Deviation: {abs(delta - 15.0) / delta_err:.2f} sigma")
     print_result("Hyperscaling 2b/nu+g/nu", hyperscaling, hyperscaling_err)
     print(f"    Expected: 2.0 (d=2)  ->  Deviation: {abs(hyperscaling - 2.0):.4f}")
 
@@ -1445,6 +1454,8 @@ def extract_magnetic_exponents(data, L_list, beta_pc, beta_pc_err, nu, nu_err):
         'beta_err': beta_err,
         'eta': eta,
         'eta_err': eta_err,
+        'delta': delta,
+        'delta_err': delta_err,
         'hyperscaling': hyperscaling,
         'hyperscaling_err': hyperscaling_err,
         'A_chi': A_chi,
@@ -1714,12 +1725,22 @@ def extract_all_corrections(data, L_list, beta_pc, nu, nu_err, mag_result,
         )
 
         eta_rig = 2.0 - gamma_nu_rig
+
+        # delta via Griffiths-Rushbrooke scaling relation
+        delta_rig = 1.0 + gamma_nu_rig / beta_nu_rig
+        delta_err_rig = np.sqrt(
+            (gamma_nu_err_rig / beta_nu_rig)**2 +
+            (gamma_nu_rig * beta_nu_err_rig / beta_nu_rig**2)**2
+        )
+
         hyperscaling_rig = 2 * beta_nu_rig + gamma_nu_rig
 
         print_section("Derived Exponents (from rigorous sub-leading analysis)", level=2)
         print_result("gamma = (gamma/nu)*nu", gamma_rig, gamma_err_rig)
         print_result("beta  = (beta/nu)*nu", beta_rig, beta_err_rig)
         print(f"    eta       = 2 - gamma/nu  = {eta_rig:.3f}")
+        print_result("delta = 1 + (g/nu)/(b/nu)", delta_rig, delta_err_rig)
+        print(f"    Expected: 15.0 (exact)  ->  Deviation: {abs(delta_rig - 15.0) / delta_err_rig:.2f} sigma")
         print(f"    Hyperscaling: 2*beta/nu + gamma/nu = {hyperscaling_rig:.4f}")
         print(f"    Expected (d=2): 2.0000")
         print(f"    Deviation: {abs(2.0 - hyperscaling_rig):.4f}")
