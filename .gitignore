@@ -1,0 +1,40 @@
+# --- Executables and Objects ---
+obj/
+*.o
+*.d
+prod_ising
+pilot_ising
+pilot_ising.d
+prod_ising.d
+
+# --- Data and Results (Do NOT push to GitHub) ---
+results/
+data/
+*.bin
+*.dat
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# --- LaTeX Report & Files ---
+MOD_1_RELAZIONE*/
+main.pdf
+
+# --- Editor and OS ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Visuals and Animations ---
+plots/*
+!plots/*.png
+visual_L128/
+scripts/production/plotting/render_visual.py
+scripts/production/plotting/run_visual.sh
+*.mp4
+*.gif
+!ising_critical_L128.gif
+!ising_beta_sweep_L128.gif
