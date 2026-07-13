@@ -163,12 +163,12 @@ python3 scripts/production/analysis/parse_final.py 64
 | $\gamma/\nu$ | $1.7425 \pm 0.0043$ | $1.7500^a$ | $1.74\sigma$ | Leading-only fit of $\chi'_{\max}(L)$ |
 | $\beta/\nu$ | $0.1235 \pm 0.0011$ | $0.12500^a$ | $1.28\sigma$ | Leading-only fit of $M(\beta_{pc}, L)$ |
 | $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.32\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
-| $\gamma$ | $1.71086 \pm 0.02924$ | $1.75^a$ | $1.34\sigma$ | Joint calibrated propagation |
-| $\beta$ | $0.12130 \pm 0.00233$ | $0.125^a$ | $1.59\sigma$ | Joint calibrated propagation |
-| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | Joint calibrated propagation |
-| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | Joint calibrated propagation |
+| $\gamma$ | $1.71086 \pm 0.02924$ | $1.75^a$ | $1.34\sigma$ | $\gamma=\nu(\gamma/\nu)$, correlated bootstrap |
+| $\beta$ | $0.12130 \pm 0.00233$ | $0.125^a$ | $1.59\sigma$ | $\beta=\nu(\beta/\nu)$, correlated bootstrap |
+| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | Fisher relation, correlated bootstrap |
+| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | Widom relation, correlated bootstrap |
 | $z$ | $2.18 \pm 0.08$ | $2.1667^b$ | $0.17\sigma$ | Dynamic scaling $\tau_{int} \sim L^z$ |
-| **Hyperscaling** | $1.98963 \pm 0.00497$ | $2.0000$ | $2.08\sigma$ | Joint $2(\beta/\nu)+\gamma/\nu$, $d=2$ |
+| **Hyperscaling** | $1.98963 \pm 0.00497$ | $2.0000$ | $2.08\sigma$ | $2\beta/\nu+\gamma/\nu$, correlated bootstrap |
 
 > $^a$ Exact theoretical value. $^b$ Numerical reference estimate.
 
