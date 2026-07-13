@@ -165,8 +165,8 @@ python3 scripts/production/analysis/parse_final.py 64
 | $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.32\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
 | $\gamma$ | $1.71086 \pm 0.02924$ | $1.75^a$ | $1.34\sigma$ | $\gamma=\nu(\gamma/\nu)$, correlated bootstrap |
 | $\beta$ | $0.12130 \pm 0.00233$ | $0.125^a$ | $1.59\sigma$ | $\beta=\nu(\beta/\nu)$, correlated bootstrap |
-| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | Fisher relation, correlated bootstrap |
-| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | Widom relation, correlated bootstrap |
+| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | $\eta = 2 - \gamma/\nu$ |
+| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | $\delta = 1 + (\gamma/\nu)/(\beta/\nu)$ |
 | $z$ | $2.18 \pm 0.08$ | $2.1667^b$ | $0.17\sigma$ | Dynamic scaling $\tau_{int} \sim L^z$ |
 | **Hyperscaling** | $1.98963 \pm 0.00497$ | $2.0000$ | $2.08\sigma$ | $2\beta/\nu+\gamma/\nu$, correlated bootstrap |
 
