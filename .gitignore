@@ -38,3 +38,10 @@ scripts/production/plotting/run_visual.sh
 *.gif
 !ising_critical_L128.gif
 !ising_beta_sweep_L128.gif
+
+# --- Local temporary analysis and test artifacts ---
+tmp/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log

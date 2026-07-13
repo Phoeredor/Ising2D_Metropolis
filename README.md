@@ -159,16 +159,28 @@ python3 scripts/production/analysis/parse_final.py 64
 |:---:|:---:|:---:|:---:|---|
 | $\beta_c$ | $0.440751 \pm 0.000060$ | $0.440687^a$ | $1.08\sigma$ | Binder crossing |
 | $U^*$ | $0.6116 \pm 0.0006$ | $0.6107^b$ | $1.6\sigma$ | Universal value at crossing |
-| $\nu$ | $0.9818 \pm 0.0166$ | $1.0000^a$ | $1.09\sigma$ | Correlated $\chi^2$ fit of $S(L)$ |
-| $\gamma/\nu$ | $1.7487 \pm 0.0130$ | $1.7500^a$ | $0.10\sigma$ | 3-param fit of $\chi'_{\max}(L)$ |
-| $\beta/\nu$ | $0.12473 \pm 0.00336$ | $0.12500^a$ | $0.08\sigma$ | 3-param fit of $M(\beta_{pc}, L)$ |
-| $\eta$ | $0.2513 \pm 0.0130$ | $0.2500^a$ | $0.10\sigma$ | $\eta = 2 - \gamma/\nu$ |
-| $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.33\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
-| $\delta$ | $15.02 \pm 0.41$ | $15^a$ | $0.05\sigma$ | $\delta = 1 + (\gamma/\nu)/(\beta/\nu)$ |
+| $\nu$ | $0.9818 \pm 0.0166$ | $1.0000^a$ | $1.09\sigma$ | Correlated leading-only $\chi^2$ fit of $S(L)$ |
+| $\gamma/\nu$ | $1.7425 \pm 0.0043$ | $1.7500^a$ | $1.74\sigma$ | Leading-only fit of $\chi'_{\max}(L)$ |
+| $\beta/\nu$ | $0.1235 \pm 0.0011$ | $0.12500^a$ | $1.28\sigma$ | Leading-only fit of $M(\beta_{pc}, L)$ |
+| $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.32\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
+| $\gamma$ | $1.71086 \pm 0.02924$ | $1.75^a$ | $1.34\sigma$ | Joint calibrated propagation |
+| $\beta$ | $0.12130 \pm 0.00233$ | $0.125^a$ | $1.59\sigma$ | Joint calibrated propagation |
+| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | Joint calibrated propagation |
+| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | Joint calibrated propagation |
 | $z$ | $2.18 \pm 0.08$ | $2.1667^b$ | $0.17\sigma$ | Dynamic scaling $\tau_{int} \sim L^z$ |
-| **Hyperscaling** | $1.9981 \pm 0.0147$ | $2.0000$ | $0.13\sigma$ | $2(\beta/\nu)+\gamma/\nu$, $d=2$ |
+| **Hyperscaling** | $1.98963 \pm 0.00497$ | $2.0000$ | $2.08\sigma$ | Joint $2(\beta/\nu)+\gamma/\nu$, $d=2$ |
 
 > $^a$ Exact theoretical value. $^b$ Numerical reference estimate.
+
+The official FSS models for $\nu$, $\gamma/\nu$, and $\beta/\nu$ are leading-only;
+the fixed $L^{-2}$ term is retained solely as an F-test diagnostic. Magnetic and
+specific-heat peaks use local three-point parabolas, while $M(\beta_{pc})$ uses
+the validated weighted spline. Errors on $\gamma$, $\beta$, $\eta$, $\delta$ and
+hyperscaling are joint bootstrap errors and include the measured correlations.
+The pipeline produces exactly the established 14 FSS PDFs and no correlation-specific plots.
+For the diagnostic comparison of the leading Binder-slope model with the fixed
+$L^{-2}$ correction, the nested-model F-test gives $p=0.075864$; the correction
+is therefore not promoted to the official result.
 
 <details>
 <summary><b>⏱ Preliminary Simulations & Diagnostics</b></summary>
