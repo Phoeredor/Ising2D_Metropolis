@@ -155,8 +155,8 @@ python3 scripts/production/analysis/parse_final.py 64
 
 * **Phase Transition:** Plot Magnetization $M$, Susceptibility $\chi$, and Specific Heat $C_V$ vs $\beta$.
 * **Finite-Size Scaling:** Verification of the universal scaling hypothesis: $\chi \sim L^{\gamma/\nu} \tilde{\chi}(t L^{1/\nu})$.
-* **Critical Exponents:** High-precision extraction of $\beta$, $\gamma$, $\nu$ via data collapse.
-* **Critical Slowing Down:** Measurement of the dynamic exponent $z \sim 2.17$
+* **Critical Exponents:** High-precision extraction of $\beta$, $\gamma$, $\nu$ via FSS fits and data-collapse validation.
+* **Critical Slowing Down:** Measurement of the dynamic exponent $z = 2.18(8)$.
 
 ---
 
@@ -164,31 +164,31 @@ python3 scripts/production/analysis/parse_final.py 64
 
 ### Summary of Critical Exponents
 
-| Quantity | Measured | Exact | $\Delta/\sigma$ | Method |
-|:---:|:---:|:---:|:---:|---|
-| $\beta_c$ | $0.440751 \pm 0.000060$ | $0.440687^a$ | $1.08\sigma$ | Binder crossing |
-| $U^*$ | $0.6116 \pm 0.0006$ | $0.6107^b$ | $1.6\sigma$ | Universal value at crossing |
-| $\nu$ | $0.9818 \pm 0.0166$ | $1.0000^a$ | $1.09\sigma$ | Correlated leading-only $\chi^2$ fit of $S(L)$ |
-| $\gamma/\nu$ | $1.7425 \pm 0.0043$ | $1.7500^a$ | $1.74\sigma$ | Leading-only fit of $\chi'_{\max}(L)$ |
-| $\beta/\nu$ | $0.1235 \pm 0.0011$ | $0.12500^a$ | $1.28\sigma$ | Leading-only fit of $M(\beta_{pc}, L)$ |
-| $\alpha$ | $0.007 \pm 0.023$ | $0^a$ | $0.32\sigma$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
-| $\gamma$ | $1.71086 \pm 0.02924$ | $1.75^a$ | $1.34\sigma$ | $\gamma=\nu(\gamma/\nu)$, correlated bootstrap |
-| $\beta$ | $0.12130 \pm 0.00233$ | $0.125^a$ | $1.59\sigma$ | $\beta=\nu(\beta/\nu)$, correlated bootstrap |
-| $\eta$ | $0.25746 \pm 0.00428$ | $0.2500^a$ | $1.74\sigma$ | $\eta = 2 - \gamma/\nu$ |
-| $\delta$ | $15.1046 \pm 0.1315$ | $15^a$ | $0.79\sigma$ | $\delta = 1 + (\gamma/\nu)/(\beta/\nu)$ |
-| $z$ | $2.18 \pm 0.08$ | $2.1667^b$ | $0.17\sigma$ | Dynamic scaling $\tau_{int} \sim L^z$ |
-| **Hyperscaling** | $1.98963 \pm 0.00497$ | $2.0000$ | $2.08\sigma$ | $2\beta/\nu+\gamma/\nu$, correlated bootstrap |
+| Quantity | Measured | Exact/ref. | Method |
+|:---:|:---:|:---:|---|
+| $\beta_{pc}$ | $0.440751(60)$ | $0.440687^a$ | Binder crossing |
+| $U^*$ | $0.6116(6)$ | $0.6107^b$ | Universal Binder value at crossing |
+| $1/\nu$ | $1.019(17)$ | $1^a$ | Leading-only fit of $S(L)=|\partial_\beta U_4|_{\beta_{pc}}$ |
+| $\nu$ | $0.982(17)$ | $1^a$ | Derived from the Binder-slope FSS fit |
+| $\gamma/\nu$ | $1.743(04)$ | $1.750^a$ | Leading-only fit of $\chi'_{\max}(L)$ |
+| $\beta/\nu$ | $0.124(01)$ | $0.125^a$ | Leading-only fit of $M(\beta_{pc}, L)$ |
+| $\alpha$ | $0.007(23)$ | $0^a$ | Free $g = \alpha/\nu$ in $C_{\max}(L)$ |
+| $\gamma$ | $1.711(29)$ | $1.750^a$ | $\gamma=\nu(\gamma/\nu)$, correlated bootstrap |
+| $\beta$ | $0.121(02)$ | $0.125^a$ | $\beta=\nu(\beta/\nu)$, correlated bootstrap |
+| $\eta$ | $0.258(04)$ | $0.250^a$ | $\eta = 2 - \gamma/\nu$ |
+| $\delta$ | $15.10(13)$ | $15^a$ | $\delta = 1 + (\gamma/\nu)/(\beta/\nu)$ |
+| $z$ | $2.18(8)$ | $2.1667(5)^b$ | Dynamic scaling $\tau_{int} \sim L^z$ |
 
 > $^a$ Exact theoretical value. $^b$ Numerical reference estimate.
 
-The official FSS models for $\nu$, $\gamma/\nu$, and $\beta/\nu$ are leading-only;
+The official FSS models for $\nu$, $\gamma/\nu$, and $\beta/\nu$ are leading-only
+fits with $L \geq L_{\min}=32$;
 the fixed $L^{-2}$ term is retained solely as an F-test diagnostic. Magnetic and
 specific-heat peaks use local three-point parabolas, while $M(\beta_{pc})$ uses
-the validated weighted spline. Errors on $\gamma$, $\beta$, $\eta$, $\delta$ and
-hyperscaling are joint bootstrap errors and include the measured correlations.
-The pipeline produces exactly the established 14 FSS PDFs and no correlation-specific plots.
+the validated weighted spline. Errors on $\gamma$, $\beta$, $\eta$ and $\delta$
+are joint bootstrap errors and include the measured correlations.
 For the diagnostic comparison of the leading Binder-slope model with the fixed
-$L^{-2}$ correction, the nested-model F-test gives $p=0.075864$; the correction
+$L^{-2}$ correction, the nested-model F-test gives $p_F=0.0759$; the correction
 is therefore not promoted to the official result.
 
 <details>
