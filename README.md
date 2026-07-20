@@ -10,6 +10,12 @@
 
 A high-performance C implementation of the 2D Ising model on a square lattice using MCMC with the Metropolis algorithm. This project implements an automated, rigorous pipeline designed to study phase transitions and Finite-Size Scaling (FSS).
 
+## 📄 Project Report
+
+The complete project report presents the theoretical background, numerical methodology, autocorrelation and thermalization analysis, Finite-Size Scaling procedure, and final estimates of the static and dynamic critical exponents:
+
+**[Critical Properties of the 2D Ising Model through MCMC](Critical_Properties_of_2D_Ising_Model_through_MCMC.pdf)** — University of Pisa, A.A. 2025/2026.
+
 ---
 
 ## ✨ Key Features
@@ -27,6 +33,8 @@ A high-performance C implementation of the 2D Ising model on a square lattice us
 
 ```text
 .
+├── Critical_Properties_of_2D_Ising_Model_through_MCMC.pdf
+│                             # Complete project report
 ├── src/                      # Core C source files
 │   ├── main_pilot.c          # Entry point for Pilot/Diagnostic runs
 │   ├── main_prod.c           # Entry point for Production runs
