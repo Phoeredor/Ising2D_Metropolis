@@ -12,7 +12,7 @@ A high-performance C implementation of the 2D Ising model on a square lattice us
 
 ## 📄 Laboratory Report
 
-The complete laboratory report for the *Numerical Methods for Physics* course presents the theoretical background, numerical methodology, autocorrelation and thermalization analysis, Finite-Size Scaling procedure, and final estimates of the static and dynamic critical exponents:
+Complete laboratory report for the *Numerical Methods for Physics - Module 1*:
 
 **[Critical Properties of the 2D Ising Model through MCMC — Laboratory Report](Critical_Properties_of_2D_Ising_Model_through_MCMC.pdf)**<br>
 University of Pisa, A.A. 2025/2026.
